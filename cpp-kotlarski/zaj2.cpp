@@ -6,10 +6,12 @@
 ///
 #pragma region Zadanie 1
 
-class kalkulator {
+class kalkulator
+{
 private:
 	int liczba1;
 	int liczba2;
+
 public:
 	kalkulator(void);
 	~kalkulator(void);
@@ -27,7 +29,6 @@ kalkulator::kalkulator(void)
 
 kalkulator::~kalkulator(void)
 {
-
 }
 
 int kalkulator::dodawanie(void)
@@ -58,16 +59,16 @@ void kalkulator::klawiatura(void)
 	this->liczba2 = l2;
 }
 
-//int main()
+// int main()
 //{
 //	kalkulator kalk;
 //	kalk.klawiatura();
 //	std::cout << "Wynik dodawania : " << kalk.dodawanie() << std::endl;
 //	std::cout << "Wynik odejmowania : " << kalk.odejmowanie() << std::endl;
 //	std::cout << "Wynik mnozenia : " << kalk.mnozenie() << std::endl;
-//	
+//
 //	std::cin.get();
-//}
+// }
 #pragma endregion
 
 // Zadanie 2
@@ -75,10 +76,12 @@ void kalkulator::klawiatura(void)
 
 #pragma region Zadanie 2
 
-class operacje {
+class operacje
+{
 private:
 	int liczba1;
 	int liczba2;
+
 public:
 	operacje(void);
 	~operacje(void);
@@ -96,7 +99,6 @@ operacje::operacje(void)
 
 operacje::~operacje(void)
 {
-
 }
 
 int operacje::wieksza(void)
@@ -127,20 +129,20 @@ void operacje::klawiatura(void)
 	this->liczba2 = l2;
 }
 
-//int main()
+// int main()
 //{
 //	operacje oper;
 //	oper.klawiatura();
 //	std::cout << "Wieksza liczba : " << oper.wieksza() << std::endl;
 //	std::cout << "Mniejsza liczba : " << oper.mniejsza() << std::endl;
-//	
+//
 //	if (oper.czy_rowne() == 1)
 //		std::cout << "Liczby sa rowne" << std::endl;
 //	else
 //		std::cout << "Liczby nie sa rowne" << std::endl;
 //
 //	std::cin.get();
-//}
+// }
 
 #pragma endregion
 
@@ -149,12 +151,14 @@ void operacje::klawiatura(void)
 
 #pragma region Zadanie 3
 
-class algorytmy {
+class algorytmy
+{
 private:
 	int liczba1;
 	int liczba2;
 	int liczba3;
 	int liczba4;
+
 public:
 	algorytmy(void);
 	~algorytmy(void);
@@ -180,21 +184,20 @@ algorytmy::~algorytmy(void)
 
 int algorytmy::max(void)
 {
-	std::vector<int> liczby = { liczba1, liczba2, liczba3, liczba4 };
+	std::vector<int> liczby = {liczba1, liczba2, liczba3, liczba4};
 	return *std::max_element(liczby.begin(), liczby.end());
-
 }
 
 int algorytmy::mini(void)
 {
-	std::vector<int> liczby = { liczba1, liczba2, liczba3, liczba4 };
+	std::vector<int> liczby = {liczba1, liczba2, liczba3, liczba4};
 	return *std::min_element(liczby.begin(), liczby.end());
 }
 
 int algorytmy::suma(void)
 {
 	int suma = 0;
-	std::vector<int> liczby = { liczba1, liczba2, liczba3, liczba4 };
+	std::vector<int> liczby = {liczba1, liczba2, liczba3, liczba4};
 
 	for (auto l : liczby)
 	{
@@ -205,7 +208,7 @@ int algorytmy::suma(void)
 
 int algorytmy::szukana(int x)
 {
-	std::vector<int> liczby = { liczba1, liczba2, liczba3, liczba4 };
+	std::vector<int> liczby = {liczba1, liczba2, liczba3, liczba4};
 	auto it = std::find(liczby.begin(), liczby.end(), x);
 
 	if (it != liczby.end())
@@ -217,7 +220,7 @@ int algorytmy::szukana(int x)
 int algorytmy::parzyste(void)
 {
 	int parzyste = 0;
-	std::vector<int> liczby = { liczba1, liczba2, liczba3, liczba4 };
+	std::vector<int> liczby = {liczba1, liczba2, liczba3, liczba4};
 
 	for (auto l : liczby)
 	{
@@ -234,7 +237,7 @@ void algorytmy::klawiatura(void)
 	std::cin >> liczba1 >> liczba2 >> liczba3 >> liczba4;
 }
 
-//int main()
+// int main()
 //{
 //	algorytmy alg;
 //	alg.klawiatura();
@@ -251,7 +254,7 @@ void algorytmy::klawiatura(void)
 //		std::cout << "W tablicy znajduja sie liczby parzyste" << std::endl;
 //	else
 //		std::cout << "W tablicy nie znajduja sie liczby parzyste" << std::endl;
-//}
+// }
 
 #pragma endregion
 
@@ -260,12 +263,14 @@ void algorytmy::klawiatura(void)
 
 #pragma region Zadanie 4
 
-class trojkat {
+class trojkat
+{
 private:
 	int podstawa;
 	int bok1;
 	int bok2;
 	int wysokosc;
+
 public:
 	trojkat(void);
 	~trojkat(void);
@@ -276,7 +281,6 @@ public:
 	int czy_rownoramienny(void);
 	void klawiatura(void);
 };
-
 
 trojkat::trojkat(void)
 {
@@ -321,13 +325,13 @@ void trojkat::klawiatura(void)
 	std::cin >> podstawa >> bok1 >> bok2 >> wysokosc;
 }
 
-//int main()
+// int main()
 //{
 //	trojkat trk;
 //	trk.klawiatura();
 //	std::cout << "Obwod trojkata: " << trk.obwod() << std::endl;
 //	std::cout << "Pole trojkata: " << trk.pole() << std::endl;
-//	
+//
 //	if (trk.pitagoras())
 //		std::cout << "Trojkat jest prostokatny" << std::endl;
 //	else
@@ -343,7 +347,7 @@ void trojkat::klawiatura(void)
 //	else
 //		std::cout << "Trojkat nie jest rownoramienny" << std::endl;
 //
-//}
+// }
 
 #pragma endregion
 
@@ -352,10 +356,12 @@ void trojkat::klawiatura(void)
 
 #pragma region Zadanie 5
 
-class prostokat {
+class prostokat
+{
 private:
 	int bok1;
 	int bok2;
+
 public:
 	prostokat(void);
 	~prostokat(void);
@@ -364,8 +370,6 @@ public:
 	int czy_kwadrat(void);
 	void klawiatura(void);
 };
-
-
 
 prostokat::prostokat(void)
 {
@@ -398,19 +402,19 @@ void prostokat::klawiatura(void)
 	std::cin >> bok1 >> bok2;
 }
 
-//int main()
-//{
-//	prostokat prost;
-//	prost.klawiatura();
-//	
-//	std::cout << "Obwod prostokata: " << prost.obwod() << std::endl;
-//	std::cout << "Pole prostokata: " << prost.pole() << std::endl;
-//	
-//	if (prost.czy_kwadrat())
-//		std::cout << "Prostokat jest kwadratem" << std::endl;
-//	else
-//		std::cout << "Prostokat nie jest kwadratem" << std::endl;
-//}
+// int main()
+// {
+// 	prostokat prost;
+// 	prost.klawiatura();
+
+// 	std::cout << "Obwod prostokata: " << prost.obwod() << std::endl;
+// 	std::cout << "Pole prostokata: " << prost.pole() << std::endl;
+
+// 	if (prost.czy_kwadrat())
+// 		std::cout << "Prostokat jest kwadratem" << std::endl;
+// 	else
+// 		std::cout << "Prostokat nie jest kwadratem" << std::endl;
+// }
 
 #pragma endregion
 
@@ -418,16 +422,20 @@ void prostokat::klawiatura(void)
 ///
 
 #pragma region Zadanie 6
+
 typedef struct
 {
 	double x1;
 	double x2;
-}wynik;
-class rownanie {
+} wynik;
+
+class rownanie
+{
 private:
 	int a;
 	int b;
 	int c;
+
 public:
 	rownanie(void);
 	~rownanie(void);
@@ -436,4 +444,124 @@ public:
 	double jeden(void);
 	wynik dwa(void);
 };
+
+rownanie::rownanie(void)
+{
+	this->a = 0;
+	this->b = 0;
+	this->c = 0;
+}
+
+rownanie::~rownanie(void)
+{
+}
+
+void rownanie::klawiatura(void)
+{
+	std::cout << "Podaj kolejno a, b, c : ";
+	std::cin >> a >> b >> c;
+}
+
+int rownanie::delta(void)
+{
+	int delta = (this->b * this->b) - (4 * this->a * this->c);
+
+	if (delta > 0)
+		return 1;
+	else if (delta == 0)
+		return 0;
+	else
+		return -1;
+}
+
+double rownanie::jeden(void)
+{
+	return (-this->b) / (2 * this->a);
+}
+
+wynik rownanie::dwa(void)
+{
+	int delta = (this->b * this->b) - (4 * this->a * this->c);
+	wynik miejca_zerowe = {0.0, 0.0};
+
+	miejca_zerowe.x1 = ((-this->b) - (delta * 1 / 2) / (2 * this->a));
+	miejca_zerowe.x2 = ((-this->b) + (delta * 1 / 2) / (2 * this->a));
+
+	return miejca_zerowe;
+}
+
+// int main(int argc, char **argv)
+// {
+// 	rownanie r;
+// 	r.klawiatura();
+// 	if (r.delta() == -1)
+// 		std::cout << "nie ma miejsc zerowych" << std::endl;
+// 	else if (r.delta() == 0)
+// 	{
+// 		std::cout << "jest jedno miejsce zerowe" << std::endl;
+// 		std::cout << "x= " << r.jeden();
+// 	}
+// 	else
+// 	{
+// 		std::cout << "sa dwa miejsca zerowe" << std::endl;
+// 		wynik temp;
+// 		temp = r.dwa();
+// 		std::cout << "x1= " << temp.x1 << std::endl;
+// 		std::cout << "x2= " << temp.x2 << std::endl;
+// 	}
+// 	return 0;
+// }
+
+#pragma endregion
+
+// Zadanie 7
+///
+
+#pragma region Zadanie 7
+
+class pojemnosc
+{
+private:
+	int podstawa1;
+	int podstawa2;
+	int wysokosc;
+
+public:
+	pojemnosc(void);
+	~pojemnosc(void);
+	int prostopadloscian(void);
+	void klawiatura(void);
+};
+
+pojemnosc::pojemnosc(void)
+{
+	this->podstawa1 = 0;
+	this->podstawa2 = 0;
+	this->wysokosc = 0;
+}
+
+pojemnosc::~pojemnosc(void)
+{
+}
+
+int pojemnosc::prostopadloscian(void)
+{
+	return (this->podstawa1 * this->podstawa2) * this->wysokosc;
+}
+
+void pojemnosc::klawiatura(void)
+{
+	std::cout << "Podaj kolejno - dlugosci podstawy pierwszej i drugiej a następnie wysokość: \n";
+	std::cin >> podstawa1 >> podstawa2 >> wysokosc;
+}
+
+// int main(int argc, char **argv)
+// {
+// 	pojemnosc *pr = new pojemnosc;
+// 	pr->klawiatura();
+// 	std::cout << "objetosc prostopadloscian " << pr->prostopadloscian() << std::endl;
+// 	delete pr;
+
+// 	return 0;
+// }
 #pragma endregion
